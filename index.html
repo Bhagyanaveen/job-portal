@@ -36,14 +36,14 @@ body {
 }
 
 /* GIF hidden initially */
-#hackGif {
+#foolGif {
   display: none;
   margin-top: 20px;
   border-radius: 10px;
 }
 
-/* 👇 NEW: center class */
-#hackGif.show {
+/* ?? NEW: center class */
+#foolGif.show {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +67,7 @@ body {
 
 <!-- Loading Screen -->
 <div id="loading">
-  <h2 style="color:Tomato;">Loading Please Wait</h2>
+  <h2 >Loading Please Wait</h2>
   <div id="container">
     <div id="bar"></div>
   </div>
@@ -76,12 +76,12 @@ body {
 
 <!-- Hacker Screen -->
 <div id="hacker">
-  <h2>Your Device is Hacked 😈</h2>
+  <h2 style="color:red;">Your Device is Hacked ??</h2>
   <p id="hackText"></p>
 
   <!-- GIF -->
   <img id="foolGif"
-       src="‪fool.gif"
+       src="fool.gif"
        width="300">
 </div>
 
@@ -107,7 +107,7 @@ function startHack() {
 
   document.getElementById("hacker").style.display = "block";
 
-  let text = "Accessing data... Passwords found...";
+  let text = "Accessing data... Passwords found... ";
   let i = 0;
 
   function type() {
@@ -117,15 +117,15 @@ function startHack() {
       setTimeout(type, 40);
     } else {
 
-      // 👇 CHANGE: show class add (center + display)
-      document.getElementById("hackGif").classList.add("show");
+      // ?? CHANGE: show class add (center + display)
+      document.getElementById("foolGif").classList.add("show");
 
       // Screen flash effect
       document.body.classList.add("flash");
 
       // Final prank delay
       setTimeout(() => {
-        alert("😂 APRIL FOOL 😂");
+        alert("?? APRIL FOOL ??");
       }, 2500);
     }
   }
